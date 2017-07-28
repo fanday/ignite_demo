@@ -34,6 +34,9 @@ class DrawerContent extends Component {
           <ListItem onPress={()=> {NavigationActions.cardExample();this.context.drawer.close()}}>
             <Text>Card example</Text>
           </ListItem>
+          <ListItem onPress={()=> {NavigationActions.counterExample();this.context.drawer.close()}}>
+            <Text>Counter example</Text>
+          </ListItem>
         </Content>
       </View>
     )

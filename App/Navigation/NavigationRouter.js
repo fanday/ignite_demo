@@ -8,6 +8,7 @@ import LaunchScreen from '../Containers/LaunchScreen'
 import ListviewExample from '../Containers/ListviewExample'
 import CardExample from '../Containers/CardExample'
 import Login from '../Containers/LoginScreen'
+import Counter from '../Containers/Counter'
 
 
 /* **************************
@@ -23,6 +24,7 @@ class NavigationRouter extends Component {
           <Scene key='launchScreen' component={LaunchScreen} title='LaunchScreen' />
           <Scene key='listViewExample' component={ListviewExample}/>
           <Scene key='cardExample' component={CardExample}/>
+          <Scene key='counterExample' component = {Counter} title='Counter'/>
         </Scene>
       </Router>
     )
