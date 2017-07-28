@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Content, Text, Card, Header, Body, Button, Title, CardItem } from 'native-base';
+import { Container, Content, Text, Card, Header, Left, Icon, Body, Button, Title, CardItem } from 'native-base';
 import {connect} from 'react-redux';
 import CounterActions from '../Redux/CounterRedux'
 
@@ -20,6 +20,11 @@ class Counter extends Component{
     return(
       <Container>
         <Header>
+          <Left>
+            <Button transparent onPress={()=> this.context.drawer.open()}>
+              <Icon name="ios-menu" />
+            </Button>
+          </Left>
           <Body>
             <Title>Redux Counter</Title>
           </Body>
@@ -57,4 +62,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+Counter.contextTypes = {drawer: React.PropTypes.object}
 export default connect(mapStateToProps, mapDispatchToProps)(Counter)
